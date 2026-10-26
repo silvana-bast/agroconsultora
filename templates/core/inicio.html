@@ -1,79 +1,631 @@
 
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroConsultora | Proyectos y financiamiento</title>
-    {% load static %}
+
+    <meta name="description" content="Asesoría en proyectos agrícolas, ambientales, emprendimiento y desarrollo territorial.">
+
+    <title>AgroConsultora | Agricultura y Desarrollo Territorial</title>
+
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
+
 <body>
+
+    <!-- ENCABEZADO -->
     <header class="encabezado">
-        <a class="logo" href="/">AgroConsultora<span>.</span></a>
-        <nav>
+
+        <a href="#inicio" class="marca">
+            <span class="marca-icono">🌿</span>
+
+            <span class="marca-texto">
+                <strong>Nombre Consultora</strong>
+                <small>Agricultura · Desarrollo · Territorio</small>
+            </span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            type="button">
+            ☰
+        </button>
+
+        <nav class="navegacion" id="navegacion">
+            <a href="#inicio" class="activo">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
             <a href="#servicios">Servicios</a>
-            <a href="#fondos">Fondos concursables</a>
+            <a href="#fondos">Fondos y Convocatorias</a>
+            <a href="#orientador">Orientador</a>
             <a href="#contacto">Contacto</a>
         </nav>
+
+        <a href="#contacto" class="boton boton-principal boton-header">
+            Solicita una Asesoría <span>→</span>
+        </a>
+
     </header>
 
     <main>
-        <section class="portada">
-            <div class="portada-contenido">
-                <p class="etiqueta">AGRICULTURA · SUSTENTABILIDAD · DESARROLLO</p>
-                <h1>Transformamos tus ideas en <span>proyectos concretos.</span></h1>
-                <p>
-                    Te acompañamos en la formulación de proyectos y en la búsqueda
-                    de oportunidades de financiamiento para impulsar tu desarrollo.
+
+        <!-- PORTADA PRINCIPAL -->
+        <section class="hero" id="inicio">
+
+            <div class="hero-contenido">
+
+                <p class="sobretitulo">
+                    CONSULTORÍA AGRONÓMICA Y TERRITORIAL
                 </p>
-                <a class="boton" href="#contacto">Solicitar asesoría</a>
+
+                <h1>
+                    Tu proyecto,<br>
+                    <span>nuestro compromiso.</span>
+                </h1>
+
+                <p class="hero-descripcion">
+                    Asesoramos a agricultores, emprendedores, organizaciones
+                    y comunidades en la búsqueda y postulación de fondos
+                    públicos para el desarrollo agrícola, local y ambiental.
+                </p>
+
+                <div class="hero-acciones">
+
+                    <a href="#contacto" class="boton boton-principal">
+                        Solicita una asesoría <span>→</span>
+                    </a>
+
+                    <a href="#servicios" class="boton boton-secundario">
+                        Conoce nuestros servicios
+                    </a>
+
+                </div>
             </div>
+
+            <!-- CATEGORÍAS DE LA CONSULTORA -->
+            <aside class="hero-categorias">
+
+                <div>
+                    <span aria-hidden="true">🌱</span>
+                    <p>Agricultura y producción rural</p>
+                </div>
+
+                <div>
+                    <span aria-hidden="true">🍃</span>
+                    <p>Medio ambiente y sustentabilidad</p>
+                </div>
+
+                <div>
+                    <span aria-hidden="true">▥</span>
+                    <p>Emprendimiento y desarrollo local</p>
+                </div>
+
+                <div>
+                    <span aria-hidden="true">♧</span>
+                    <p>Organizaciones y comunidades</p>
+                </div>
+
+            </aside>
+
         </section>
 
-        <section class="seccion" id="servicios">
-            <p class="etiqueta">¿CÓMO PODEMOS AYUDARTE?</p>
-            <h2>Servicios de consultoría</h2>
-            <div class="tarjetas">
-                <article class="tarjeta">
-                    <h3>Formulación de proyectos</h3>
-                    <p>Apoyo en la preparación de propuestas, objetivos, actividades y presupuestos.</p>
-                </article>
-                <article class="tarjeta">
-                    <h3>Agricultura y agua</h3>
-                    <p>Orientación en iniciativas agrícolas, riego eficiente y uso responsable del agua.</p>
-                </article>
-                <article class="tarjeta">
-                    <h3>Medio ambiente</h3>
-                    <p>Apoyo a proyectos de sustentabilidad, reciclaje, conservación y educación ambiental.</p>
-                </article>
+        <!-- SERVICIOS: UNA SOLA SECCIÓN, CUATRO TARJETAS -->
+        <section class="seccion servicios" id="servicios">
+
+            <div class="contenedor">
+
+                <div class="rejilla-servicios">
+
+                    <!-- SERVICIO 1: AGRICULTURA -->
+                    <article class="tarjeta-servicio">
+
+                        <div class="servicio-encabezado">
+
+                            <div class="icono-servicio" aria-hidden="true">
+
+                                <svg
+                                    viewBox="0 0 48 48"
+                                    xmlns="http://www.w3.org/2000/svg">
+
+                                    <path
+                                        d="M24 42V22"
+                                        fill="none"
+                                        stroke="#075b3b"
+                                        stroke-width="4"
+                                        stroke-linecap="round"/>
+
+                                    <path
+                                        d="M24 27C8 27 5 15 5 7c13 0 22 5 19 20Z"
+                                        fill="#075b3b"/>
+
+                                    <path
+                                        d="M24 21C24 8 33 4 44 5c0 13-7 20-20 16Z"
+                                        fill="#087c4b"/>
+
+                                    <path
+                                        d="M10 42h28"
+                                        stroke="#075b3b"
+                                        stroke-width="4"
+                                        stroke-linecap="round"/>
+
+                                </svg>
+
+                            </div>
+
+                            <h3>Asesoría en proyectos agrícolas</h3>
+
+                        </div>
+
+                        <p>
+                            Formulación y postulación a fondos para riego,
+                            infraestructura, producción y desarrollo rural.
+                        </p>
+
+                    </article>
+
+                    <!-- SERVICIO 2: MEDIO AMBIENTE -->
+                    <article class="tarjeta-servicio">
+
+                        <div class="servicio-encabezado">
+
+                            <div class="icono-servicio" aria-hidden="true">
+
+                                <svg
+                                    viewBox="0 0 48 48"
+                                    xmlns="http://www.w3.org/2000/svg">
+
+                                    <path
+                                        d="M24 43C8 34 7 18 16 8c7-7 17-5 25-5-1 15-3 29-17 40Z"
+                                        fill="#087c4b"/>
+
+                                    <path
+                                        d="M9 38 35 10"
+                                        fill="none"
+                                        stroke="#075b3b"
+                                        stroke-width="3"
+                                        stroke-linecap="round"/>
+
+                                </svg>
+
+                            </div>
+
+                            <h3>Proyectos de medio ambiente</h3>
+
+                        </div>
+
+                        <p>
+                            Iniciativas de conservación, reciclaje,
+                            eficiencia hídrica y educación ambiental.
+                        </p>
+
+                    </article>
+
+                    <!-- SERVICIO 3: EMPRENDIMIENTO -->
+                    <article class="tarjeta-servicio">
+
+                        <div class="servicio-encabezado">
+
+                            <div class="icono-servicio" aria-hidden="true">
+
+                                <svg
+                                    viewBox="0 0 48 48"
+                                    xmlns="http://www.w3.org/2000/svg">
+
+                                    <rect
+                                        x="4" y="29"
+                                        width="10" height="15"
+                                        rx="1"
+                                        fill="#075b3b"/>
+
+                                    <rect
+                                        x="19" y="18"
+                                        width="10" height="26"
+                                        rx="1"
+                                        fill="#087c4b"/>
+
+                                    <rect
+                                        x="34" y="5"
+                                        width="10" height="39"
+                                        rx="1"
+                                        fill="#087c4b"/>
+
+                                </svg>
+
+                            </div>
+
+                            <h3>Apoyo a emprendedores</h3>
+
+                        </div>
+
+                        <p>
+                            Asesoría para postular a programas de Sercotec
+                            y otras instituciones para iniciar o fortalecer
+                            tu negocio.
+                        </p>
+
+                    </article>
+
+                    <!-- SERVICIO 4: ORGANIZACIONES -->
+                    <article class="tarjeta-servicio">
+
+                        <div class="servicio-encabezado">
+
+                            <div class="icono-servicio" aria-hidden="true">
+
+                                <svg
+                                    viewBox="0 0 48 48"
+                                    xmlns="http://www.w3.org/2000/svg">
+
+                                    <circle
+                                        cx="24" cy="12" r="8"
+                                        fill="#075b3b"/>
+
+                                    <circle
+                                        cx="9" cy="18" r="6"
+                                        fill="#087c4b"/>
+
+                                    <circle
+                                        cx="39" cy="18" r="6"
+                                        fill="#087c4b"/>
+
+                                    <path
+                                        d="M10 42V34c0-8 6-13 14-13s14 5 14 13v8Z"
+                                        fill="#075b3b"/>
+
+                                    <path
+                                        d="M1 39v-7c0-5 3-9 8-9 3 0 5 1 7 3-3 3-5 7-5 12v1Z"
+                                        fill="#087c4b"/>
+
+                                    <path
+                                        d="M47 39v-7c0-5-3-9-8-9-3 0-5 1-7 3 3 3 5 7 5 12v1Z"
+                                        fill="#087c4b"/>
+
+                                </svg>
+
+                            </div>
+
+                            <h3>Acompañamiento a organizaciones</h3>
+
+                        </div>
+
+                        <p>
+                            Apoyo a juntas de vecinos, cooperativas y
+                            comunidades en proyectos de desarrollo territorial.
+                        </p>
+
+                    </article>
+
+                </div>
+
             </div>
+
         </section>
 
+        <!-- ORIENTADOR DE PROYECTOS -->
+        <section class="orientador" id="orientador">
+
+            <div
+                class="orientador-imagen"
+                role="img"
+                aria-label="Cultivo de una planta en suelo fértil">
+            </div>
+
+            <div class="orientador-contenido">
+
+                <p class="sobretitulo">ENCUENTRA TU CAMINO</p>
+
+                <h2>Encuentra apoyo para tu proyecto</h2>
+
+                <p>
+                    Cuéntanos qué quieres desarrollar y te orientaremos
+                    sobre los tipos de convocatorias que puedes investigar.
+                </p>
+
+                <a href="#contacto" class="boton boton-principal">
+                    Comenzar orientador <span>→</span>
+                </a>
+
+            </div>
+
+            <ul class="beneficios">
+                <li>Información clara</li>
+                <li>Orientación personalizada</li>
+                <li>Fuentes oficiales</li>
+                <li>Apoyo durante el proceso</li>
+            </ul>
+
+        </section>
+
+        <!-- FONDOS Y CONVOCATORIAS -->
         <section class="seccion fondos" id="fondos">
-            <p class="etiqueta">OPORTUNIDADES DE FINANCIAMIENTO</p>
-            <h2>Encuentra fondos para tu proyecto</h2>
-            <p>
-                Consulta oportunidades de instituciones públicas y revisa sus
-                requisitos y plazos en las fuentes oficiales.
-            </p>
-            <p class="aviso">
-                Estamos preparando el catálogo de convocatorias verificadas.
-                Próximamente podrás consultar aquí sus fechas y condiciones.
-            </p>
+
+            <div class="contenedor">
+
+                <div class="titulo-fondos">
+
+                    <div>
+                        <p class="sobretitulo">
+                            OPORTUNIDADES DE FINANCIAMIENTO
+                        </p>
+
+                        <h2>Fondos y convocatorias destacadas</h2>
+                    </div>
+
+                    <a href="#contacto" class="enlace-ver">
+                        Consultar oportunidades →
+                    </a>
+
+                </div>
+
+                <div class="rejilla-fondos">
+
+                    <!-- GOBIERNO REGIONAL -->
+                    <article class="tarjeta-fondo">
+
+                        <div class="fondo-imagen fondo-gore">
+                            <span>GORE</span>
+                        </div>
+
+                        <div class="fondo-cuerpo">
+
+                            <h3>Gobiernos Regionales</h3>
+
+                            <p>
+                                Programas regionales para iniciativas
+                                territoriales, comunitarias y de desarrollo local.
+                            </p>
+
+                            <span class="estado estado-pendiente">
+                                Consultar estado
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                    <!-- SERCOTEC -->
+                    <article class="tarjeta-fondo">
+
+                        <div class="fondo-imagen fondo-sercotec">
+                            <span>Sercotec</span>
+                        </div>
+
+                        <div class="fondo-cuerpo">
+
+                            <h3>Sercotec</h3>
+
+                            <p>
+                                Programas de apoyo a emprendimientos y micro
+                                y pequeñas empresas.
+                            </p>
+
+                            <span class="estado estado-pendiente">
+                                Consultar estado
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                    <!-- MEDIO AMBIENTE -->
+                    <article class="tarjeta-fondo">
+
+                        <div class="fondo-imagen fondo-ambiente">
+                            <span>Medio Ambiente</span>
+                        </div>
+
+                        <div class="fondo-cuerpo">
+
+                            <h3>Fondos ambientales</h3>
+
+                            <p>
+                                Iniciativas de conservación, sustentabilidad
+                                y educación ambiental.
+                            </p>
+
+                            <span class="estado estado-pendiente">
+                                Consultar estado
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                    <!-- INDAP -->
+                    <article class="tarjeta-fondo">
+
+                        <div class="fondo-imagen fondo-indap">
+                            <span>INDAP</span>
+                        </div>
+
+                        <div class="fondo-cuerpo">
+
+                            <h3>INDAP</h3>
+
+                            <p>
+                                Instrumentos de apoyo para la agricultura
+                                familiar campesina.
+                            </p>
+
+                            <span class="estado estado-pendiente">
+                                Consultar estado
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <p class="nota-fondos">
+                    Estas tarjetas son informativas. Las convocatorias,
+                    fechas, requisitos y montos deben verificarse en las
+                    fuentes oficiales antes de publicarse como oportunidades
+                    abiertas.
+                </p>
+
+            </div>
+
         </section>
 
-        <section class="seccion contacto" id="contacto">
-            <h2>¿Tienes un proyecto en mente?</h2>
-            <p>Conversemos sobre tu idea y las alternativas de asesoría.</p>
-            <a class="boton" href="mailto:contacto@ejemplo.cl">Consultar por asesoría</a>
-            <p class="nota">El correo es provisional y debe reemplazarse por el contacto real.</p>
+        <!-- CÓMO TRABAJAMOS -->
+        <section class="seccion proceso" id="nosotros">
+
+            <div class="contenedor">
+
+                <p class="sobretitulo">
+                    TE ACOMPAÑAMOS EN CADA ETAPA
+                </p>
+
+                <h2>¿Cómo trabajamos?</h2>
+
+                <div class="pasos">
+
+                    <article class="paso">
+                        <span>1</span>
+
+                        <div>
+                            <h3>Conocemos tu idea</h3>
+                            <p>
+                                Conversamos sobre tus objetivos y necesidades.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="paso">
+                        <span>2</span>
+
+                        <div>
+                            <h3>Identificamos oportunidades</h3>
+                            <p>
+                                Revisamos programas que podrían ajustarse
+                                a tu perfil.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="paso">
+                        <span>3</span>
+
+                        <div>
+                            <h3>Preparamos tu proyecto</h3>
+                            <p>
+                                Organizamos la propuesta y sus antecedentes.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="paso">
+                        <span>4</span>
+
+                        <div>
+                            <h3>Te acompañamos</h3>
+                            <p>
+                                Te orientamos durante las etapas acordadas.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
         </section>
+
+        <!-- CONTACTO -->
+        <section class="llamada" id="contacto">
+
+            <div>
+
+                <p class="sobretitulo">HAGAMOS CRECER TU IDEA</p>
+
+                <h2>¿Tienes un proyecto? Conversemos.</h2>
+
+                <p>
+                    Da el primer paso para explorar las alternativas disponibles.
+                </p>
+
+            </div>
+
+            <a href="mailto:contacto@ejemplo.cl" class="boton boton-claro">
+                Solicitar asesoría →
+            </a>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p>AgroConsultora · Proyectos, agricultura y sustentabilidad</p>
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+
+        <div class="pie-contenido">
+
+            <div class="pie-marca">
+
+                <a href="#inicio" class="marca marca-pie">
+
+                    <span class="marca-icono">🌿</span>
+
+                    <span class="marca-texto">
+                        <strong>Nombre Consultora</strong>
+                        <small>Agricultura · Desarrollo · Territorio</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Asesoría para impulsar proyectos agrícolas,
+                    ambientales y territoriales.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Enlaces</h3>
+
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#fondos">Fondos y convocatorias</a>
+                <a href="#orientador">Orientador</a>
+                <a href="#contacto">Contacto</a>
+
+            </div>
+
+            <div>
+
+                <h3>Contacto</h3>
+
+                <p>
+                    El correo y los datos de contacto se configurarán aquí.
+                </p>
+
+                <a href="mailto:contacto@ejemplo.cl">
+                    Solicitar asesoría
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="pie-inferior">
+
+            <span>© 2026 Nombre Consultora</span>
+
+            <span>
+                Agricultura · Desarrollo · Sustentabilidad
+            </span>
+
+        </div>
+
     </footer>
+
+    <script src="{% static 'js/menu.js' %}"></script>
+
 </body>
 </html>
-```
